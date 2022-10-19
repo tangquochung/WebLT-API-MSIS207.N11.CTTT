@@ -1,7 +1,12 @@
 let express = require('express')
 let router = express.Router()
-router.get('/person',(req, res) => {
+
+router.get('/person', (req, res) => {
     res.send('You have request a person')
 })
 
-module.exports=router
+router.get('/person/:name', (req, res) => {
+    res.send(`You have request a person ${rq.params.name}`)
+})
+
+module.exports=router 
