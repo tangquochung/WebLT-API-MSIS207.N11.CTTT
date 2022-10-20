@@ -1,12 +1,22 @@
 let express = require('express')
 let router = express.Router()
 
+// QueryString => query property on the request object
+// localhost:3000/person?name=thomas&age=20
 router.get('/person', (req, res) => {
-    res.send('You have request a person')
+    if (req.query.name){
+        res.send(`You have request a person ${req.query.name}`)
+    }
+    else{
+        res.send('You have request a person')
+    }
 })
 
+//Params property on the request object
+// localhost:3000/person/person/thomas
 router.get('/person/:name', (req, res) => {
-    res.send(`You have request a person ${rq.params.name}`)
+    res.send(`You have request a person ${req.params.name}`)
 })
 
-module.exports=router 
+
+module.exports = router 

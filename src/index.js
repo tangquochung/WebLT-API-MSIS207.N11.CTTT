@@ -4,6 +4,12 @@ let app = express()
 
 let personRoute = require('./routes/person')
 
+app.use((req, res, next) => {
+    console.log(`${new Date().toString()} => ${req.originalURl}`)
+     //req.send(' ')
+    next()
+})
+
 app.use(personRoute)
 app.use(express.static('public'))
 
