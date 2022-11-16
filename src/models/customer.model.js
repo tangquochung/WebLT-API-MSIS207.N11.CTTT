@@ -1,11 +1,6 @@
 let mongoose = require('mongoose')
 
-const server = 'ac-rpadodz-shard-00-00.qm5cvo5.mongodb.net:27017'
-const database = 'test'
-const user = 'QuocHung'
-const password = 'Goldonha321'
-
-mongoose.connect(`mongodb://${user}:${password}@${server}/${database}`)
+mongoose.connect(`mongodb+srv://QuocHung:Goldonha321@clusterhung.qm5cvo5.mongodb.net/testapimail?retryWrites=true&w=majority`)
 
 let CustomerSchema = new mongoose.Schema({
     name: String,
