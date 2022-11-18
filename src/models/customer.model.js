@@ -1,6 +1,6 @@
 let mongoose = require('mongoose')
 
-mongoose.connect(`mongodb+srv://QuocHung:Goldonha321@clusterhung.qm5cvo5.mongodb.net/testapimail?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://QuocHung:Goldonha321@clusterhung.qm5cvo5.mongodb.net/testapimail`)
 
 let CustomerSchema = new mongoose.Schema({
     name: String,
